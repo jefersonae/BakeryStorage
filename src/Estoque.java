@@ -36,6 +36,7 @@ public class Estoque {
             if (produto.quantidadeEstoque >= quantidade) {
                 produto.quantidadeEstoque -= quantidade;
                 produto.quantidadeVendida += quantidade;
+                produto.valorSaida += produto.valorUnitario* quantidade;
                 System.out.println("Venda realizada com sucesso!");
             } else {
                 System.out.println("Quantidade insuficiente no estoque.");
@@ -62,7 +63,7 @@ public class Estoque {
             if (produto.quantidadeVendida > 0) {
                 System.out.println("Produto: " + produto.descricao);
                 System.out.println("Quantidade Vendida: " + produto.quantidadeVendida);
-                System.out.println("Total Vendido: R$ " + (produto.quantidadeVendida * produto.valorSaida));
+                System.out.println("Total Vendido: R$ " + produto.valorSaida);
                 System.out.println("--------------------------");
             }
             atual = atual.next;

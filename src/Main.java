@@ -38,7 +38,7 @@ public class Main {
                     System.out.print("Valor de entrada: ");
                     double valorEntrada = scanner.nextDouble();
 
-                    System.out.print("Valor de saída: ");
+                    System.out.print("Valor Unitário: ");
                     double valorSaida = scanner.nextDouble();
 
                     System.out.print("Quantidade em estoque: ");
