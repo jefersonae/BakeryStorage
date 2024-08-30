@@ -61,7 +61,9 @@ public class Main {
                     int codigoRepor = scanner.nextInt();
                     System.out.print("Quantidade a repor: ");
                     int quantidadeRepor = scanner.nextInt();
-                    controleEstoque.reporEstoque(codigoRepor, quantidadeRepor);
+                    System.out.print("Valor dos itens repostos: ");
+                    double valorRepor = scanner.nextDouble();
+                    controleEstoque.reporEstoque(codigoRepor, quantidadeRepor, valorRepor);
                     break;
 
                 case 5:

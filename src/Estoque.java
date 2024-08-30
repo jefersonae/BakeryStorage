@@ -20,10 +20,11 @@ public class Estoque {
         System.out.println("Produtos ordenados por nome.");
     }
 
-    public void reporEstoque(int codigo, int quantidade) {
+    public void reporEstoque(int codigo, int quantidade, double valorEntrada) {
         Produto produto = listaProdutos.buscarPorCodigo(codigo);
         if (produto != null) {
             produto.quantidadeEstoque += quantidade;
+            produto.valorEntrada += produto.valorEntrada + valorEntrada;
             System.out.println("Estoque do produto " + produto.descricao + " atualizado.");
         } else {
             System.out.println("Produto não encontrado.");
