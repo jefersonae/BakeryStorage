@@ -37,7 +37,7 @@ public class Estoque {
             if (produto.quantidadeEstoque >= quantidade) {
                 produto.quantidadeEstoque -= quantidade;
                 produto.quantidadeVendida += quantidade;
-                produto.valorSaida += produto.valorUnitario* quantidade;
+                produto.valorSaida += produto.valorUnitario * quantidade;
                 System.out.println("Venda realizada com sucesso!");
             } else {
                 System.out.println("Quantidade insuficiente no estoque.");
@@ -50,13 +50,13 @@ public class Estoque {
     public void aplicarAlteracaoPrecos(double percentual) {
         Node atual = listaProdutos.head;
         while (atual != null) {
-            atual.produto.valorSaida += atual.produto.valorSaida * (percentual / 100);
+            atual.produto.valorUnitario = atual.produto.valorUnitario * (percentual / 100);
             atual = atual.next;
         }
         System.out.println("Alteração de preços aplicada.");
     }
 
-    public void mostrarRelatorioVendas() {
+    public String mostrarRelatorioVendas() {
         System.out.println("Relatório de Vendas:");
         Node atual = listaProdutos.head;
         while (atual != null) {
@@ -69,9 +69,10 @@ public class Estoque {
             }
             atual = atual.next;
         }
+        return null;
     }
 
-    public void mostrarRelatorioEstoque() {
+    public String mostrarRelatorioEstoque() {
         System.out.println("Relatório de Estoque:");
         Node atual = listaProdutos.head;
         while (atual != null) {
@@ -81,5 +82,6 @@ public class Estoque {
             System.out.println("--------------------------");
             atual = atual.next;
         }
+        return null;
     }
 }

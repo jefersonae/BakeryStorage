@@ -9,3 +9,11 @@ os produtos da padaria.
 * Java 8+
 * Swing
 ## Como funciona
+- Adicionar produto : Função para adicionar um novo produto à lista de produtos
+- Mostrar produtos: Função para listar todos os produtos atualmente no pedido
+- Ordenar lista de produtos por nome: Função para ordenar a lista de produtos alfabeticamente pelo nome
+- Repor estoque de produto: Função para adicionar uma quantidade ao estoque existente de um produto
+- Vender produto: Função para registrar a venda de uma quantidade de um produto e atualizar o estoque
+- Aplicar alteração de preços em todos os produtos: Função para aplicar um aumento percentual em todos os produtos
+- Mostrar relatório de vendas: Função para mostrar um relatório de vendas para todos os produtos
+- Mostrar relatório de estoque: Função para mostrar um relatório do estado atual do estoque

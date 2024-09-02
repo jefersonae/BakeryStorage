@@ -1,5 +1,6 @@
 package src;
 
+
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +9,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         int opcao;
+
 
         do {
             System.out.println("\nSistema de Controle de Estoque");
